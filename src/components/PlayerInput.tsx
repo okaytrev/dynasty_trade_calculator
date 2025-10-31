@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Player, Position, PlayerLookup } from '../types';
-import { getPlayerValue, normalizePlayerName } from '../utils/valueCalculator';
+import { normalizePlayerName } from '../utils/valueCalculator';
 
 interface PlayerInputProps {
   player: Player;
@@ -29,7 +29,7 @@ export default function PlayerInput({
       const inputWords = normalizedInput.split(/\s+/).filter(w => w.length > 0);
 
       const matches = Object.entries(playerLookup)
-        .filter(([normalizedName, data]) => {
+        .filter(([normalizedName]) => {
           // Match if any input word is found in the player name
           return inputWords.some(word => normalizedName.includes(word));
         })

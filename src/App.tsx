@@ -11,7 +11,6 @@ import LeagueSettings from './components/LeagueSettings';
 import TeamColumn from './components/TeamColumn';
 import TradeResults from './components/TradeResults';
 import { fetchDynastyProcessCSV } from './utils/csvParser';
-import { fetchFantasyCalcValues } from './utils/apiClient';
 import { createPlayerLookup, getDraftPickValue, setPickValuesFromCSV } from './utils/valueCalculator';
 import { calculateTrade } from './utils/tradeCalculator';
 import { encodeTradeToURL, decodeTradeFromURL, copyToClipboard } from './utils/urlSharing';
